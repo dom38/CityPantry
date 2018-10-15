@@ -12,7 +12,9 @@ To build the application, check out the code into a fresh directory:
 
 `git clone https://github.com/dom38/CityPantry.git`
 
-Either package the application using MVN, Gradle, Java or an IDE, or drop the jar into `{projectRoot}/out/artifacts/CityPantry_jar/CityPantry.jar`
+Either package the application using MVN (`mvn test package` will produce test reports and drop the jar in the targets folder), Gradle, Java or an IDE, or drop the jar into
+
+`{projectRoot}/out/artifacts/CityPantry_jar/CityPantry.jar`
 
 If the jar exists elsewhere, update its location on line 7 of the Dockerfile.
 
