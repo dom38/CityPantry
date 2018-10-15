@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Vendor {
 
+    //Data structure is the same as laid out in the documentation
+
     String name;
     String postcode;
     int maxCovers;

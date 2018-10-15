@@ -11,6 +11,8 @@ public class FilterProductsOnCovers {
 
         ArrayList<Item> result = new ArrayList<>();
 
+        //Iterate through the fetched list from the vendorsList and check the covers vs required covers
+        // Add any items with the required covers to a list and return the list
         for (Vendor vendors : vendorsList) {
 
             if (vendors.getMaxCovers() > covers) {

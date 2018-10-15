@@ -29,6 +29,9 @@ public class Item {
 
     }
 
+    //Comparison is required to make sure that queries can be compared to each other, so I added a custom equals
+    // and hashcode method to make sure that the same items with different hashcodes are still equivalent
+
     @Override
     public boolean equals (Object item) {
 
