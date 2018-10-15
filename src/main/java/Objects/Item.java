@@ -1,7 +1,7 @@
 package Objects;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Item {
 
@@ -26,6 +26,25 @@ public class Item {
         this.name = name;
         this.allergens = allergens;
         this.advanceTime = advanceTime;
+
+    }
+
+    @Override
+    public boolean equals (Object item) {
+
+        if (item == this) return true;
+        if (!(item instanceof Item)) return false;
+        Item equalsItem = (Item) item;
+        return advanceTime == equalsItem.advanceTime &&
+                Objects.equals(name, equalsItem.name) &&
+                Objects.equals(allergens, equalsItem.allergens);
+
+    }
+
+    @Override
+    public int hashCode () {
+
+        return Objects.hash(name, allergens, advanceTime);
 
     }
 }

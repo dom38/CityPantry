@@ -46,6 +46,8 @@ public class CreateVendorsList {
 
             }
 
+            vendorList.get(vendorList.size()-1).setItems(itemList);
+
 
         } catch (FileNotFoundException fileNotFoundException) {
 

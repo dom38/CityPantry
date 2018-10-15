@@ -30,6 +30,22 @@ public class CreateVendorsListTest {
     }
 
     @Test
+    public void testThatAllVendorsAreAdded () {
+
+        ArrayList<Vendor> vendorArrayList = createVendorsList.parseFile(filePath);
+        Assert.assertEquals( vendorArrayList.size(), 4);
+
+    }
+
+    @Test
+    public void testThatFourthVendorIsWellKneaded () {
+
+        ArrayList<Vendor> vendorArrayList = createVendorsList.parseFile(filePath);
+        Assert.assertEquals( vendorArrayList.get(3).getName(), "Well Kneaded");
+
+    }
+
+    @Test
     public void testThatFirstVendorHasCorrectPostcode () {
 
         ArrayList<Vendor> vendorArrayList = createVendorsList.parseFile(filePath);
@@ -82,6 +98,14 @@ public class CreateVendorsListTest {
 
         ArrayList<Vendor> vendorArrayList = createVendorsList.parseFile(filePath);
         Assert.assertEquals(vendorArrayList.get(2).getItems().get(0).getAllergens().get(0), "");
+
+    }
+
+    @Test
+    public void testThatItemsAppearForLastVendor () {
+
+        ArrayList<Vendor> vendorArrayList = createVendorsList.parseFile(filePath);
+        Assert.assertEquals(vendorArrayList.get(3).getItems().get(0).getName(), "Full English breakfast");
 
     }
 

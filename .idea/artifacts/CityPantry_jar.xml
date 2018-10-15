@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CityPantry:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CityPantry_jar</output-path>
+    <root id="archive" name="CityPantry.jar">
+      <element id="module-output" name="CityPantry" />
+    </root>
+  </artifact>
+</component>
